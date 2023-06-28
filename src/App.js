@@ -82,7 +82,7 @@ function App() {
             Do you want to convert a simple sentence into one which is
             complex and difficult to understand😂😂
           </p>
-          <p className="transformer">Complexify can transform</p>
+          <p className="transformer">Complexify  transformed</p>
           <p className="simple-example">How are you?</p>
           <p className="to"> To</p>
           <p className="complex-example">
