@@ -48,6 +48,13 @@ function App() {
       })
       .catch((err) => {
         console.log(err);
+        toast({
+          title: "An error occurred",
+          description: "Try again",
+          status: "error",
+          duration: 9000,
+          isClosable: true,
+        });
       })
       .finally(() => {
         setIsLoading(false);
@@ -71,11 +78,19 @@ function App() {
       <p className="title"> Complexify</p>
       <div className="grid">
         <div className="examples">
-          <p>
-            Do you want to convert your simple sentence into one which is
+          <p className="example-title">
+            Do you want to convert a simple sentence into one which is
             complex and difficult to understand😂😂
           </p>
+          <p className="transformer">Complexify can transform</p>
+          <p className="simple-example">How are you?</p>
+          <p className="to"> To</p>
+          <p className="complex-example">
+            I would incline to inquire after your present emotional and physical
+            well-being, in order to ascertain your level of comfort and ease.
+          </p>
         </div>
+        <div className="vertical"></div>
         <div className="form-and-results">
           <textarea
             placeholder="Enter your simple sentence here"

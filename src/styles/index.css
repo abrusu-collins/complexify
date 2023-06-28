@@ -24,13 +24,26 @@ body {
 }
 .home .grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 10fr 1fr 10fr;
   width: 75%;
   margin: auto;
   gap: 5rem;
 }
-.home .grid .examples {
-  border-right: 1px solid black;
+.home .grid .examples .transformer,
+.home .grid .examples .to {
+  margin: 30px 0;
+  font-family: AgrandirRegular;
+  font-size: 25px;
+  font-weight: 600;
+}
+.home .grid .examples .simple-example,
+.home .grid .examples .complex-example {
+  background-color: #fcfeff;
+  border-radius: 5px;
+  padding: 20px;
+}
+.home .grid .vertical {
+  border-right: 1px solid #d7dbe0;
 }
 .home .grid .form-and-results textarea {
   display: block;

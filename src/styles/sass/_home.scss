@@ -1,52 +1,67 @@
-.home{
-    & .title{
+.home {
+  & .title {
+    font-family: AgrandirRegular;
+    font-size: 70px;
+    text-align: center;
+    margin: 80px 0;
+  }
+  & .grid {
+    display: grid;
+    grid-template-columns: 10fr 1fr 10fr;
+    width: 75%;
+    margin: auto;
+    gap: 5rem;
+    & .examples {
+      & .transformer,
+      .to {
+        margin: 30px 0;
         font-family: AgrandirRegular;
-        font-size: 70px;
+        font-size: 25px;
+        font-weight: 600;
+      }
+      & .simple-example,
+      .complex-example {
+        background-color: $white;
+        border-radius: 5px;
+        padding: 20px;
+      }
+    }
+    & .vertical {
+      border-right: 1px solid #d7dbe0;
+    }
+    & .form-and-results {
+      & textarea {
+        display: block;
+        width: 100%;
+        margin: 30px 0;
+        height: 100px;
+        border-radius: 5px;
+        border: 1px solid #d7dbe0;
+        padding: 10px;
+        resize: none;
+        &:focus {
+          outline: 1px solid $black;
+        }
+      }
+      & > a {
+        display: block;
         text-align: center;
-        margin: 80px 0;
-    }
-    & .grid{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        width: 75%;
-        margin: auto;
-        gap:5rem;
-        & .examples{
-            border-right: 1px solid black;
+        text-decoration: none;
+        background-color: $black;
+        color: $white;
+        padding: 15px 0px;
+        width: 100%;
+        border-radius: 5px;
+        margin-bottom: 30px;
+      }
+      & .complex {
+        background-color: $white;
+        padding: 20px;
+        border-radius: 5px;
+        & p {
+          margin-bottom: 15px;
         }
-        & .form-and-results{
-            & textarea{
-                display: block;
-                width: 100%;
-                margin: 30px 0;
-                height: 100px;
-                border-radius: 5px;
-                border: 1px solid #d7dbe0;
-                padding: 10px;
-                resize: none;
-                &:focus {
-                  outline: 1px solid $black;
-                }
-            }
-            & >a{
-                display: block;
-                text-align: center;
-                text-decoration: none;
-                background-color: $black;
-                color:$white;
-                padding:15px 0px;
-                width: 100%;
-                border-radius: 5px;
-                margin-bottom: 30px;
-            }
-            & .complex{
-                background-color: $white;
-                padding: 20px;
-                border-radius: 5px;
-                & p{
-                    margin-bottom: 15px;
-                }
-            }
-        }
+      }
     }
+  }
 }
