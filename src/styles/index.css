@@ -77,3 +77,37 @@ body {
 .home .grid .form-and-results .complex p {
   margin-bottom: 15px;
 }
+
+@media screen and (max-width: 1140px) {
+  .home .grid {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 961px) {
+  .home .grid {
+    grid-template-columns: 20fr 1fr 20fr;
+  }
+}
+@media screen and (max-width: 924px) {
+  .home .grid {
+    grid-template-columns: 2fr;
+    width: 60%;
+    margin-bottom: 40px;
+  }
+  .home .grid .vertical {
+    display: none;
+  }
+}
+@media screen and (max-width: 748px) {
+  .home .grid {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 426px) {
+  .home .title {
+    font-size: 45px;
+  }
+  .home .grid {
+    width: 90%;
+  }
+}

@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaCopy } from "react-icons/fa";
+// import { useNavigate } from "react-router-dom";
 import { Configuration, OpenAIApi } from "openai";
 import { Spinner } from "@chakra-ui/react";
 import { useToast } from "@chakra-ui/react";
@@ -12,6 +13,12 @@ function App() {
   const [simpleSentence, setSimpleSentence] = useState("");
   const [complexSentence, setComplexSentence] = useState("");
   const toast = useToast();
+  useEffect(() => {
+    if (complexSentence) {
+      const element = document.getElementById("result");
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [complexSentence]);
   const doNoting = (e) => {
     e.preventDefault();
   };
@@ -44,7 +51,7 @@ function App() {
       })
       .then((data) => {
         setComplexSentence(data.data.choices[0].text);
-        console.log(data.data.choices[0].text);
+        // console.log(data.data.choices[0].text);
       })
       .catch((err) => {
         console.log(err);
@@ -79,10 +86,10 @@ function App() {
       <div className="grid">
         <div className="examples">
           <p className="example-title">
-            Do you want to convert a simple sentence into one which is
-            complex and difficult to understand😂😂
+            Do you want to convert a simple sentence into one which is complex
+            and difficult to understand😂😂
           </p>
-          <p className="transformer">Complexify  transformed</p>
+          <p className="transformer">Complexify transformed</p>
           <p className="simple-example">How are you?</p>
           <p className="to"> To</p>
           <p className="complex-example">
@@ -103,7 +110,7 @@ function App() {
             {isLoading ? <Spinner size="md" /> : "Make it complex"}
           </a>
           {complexSentence && (
-            <div className="complex">
+            <div className="complex" id="result">
               <p>{complexSentence}</p>
               <a href="" onClick={copy}>
                 <FaCopy size={25} />
