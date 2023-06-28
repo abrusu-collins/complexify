@@ -95,6 +95,7 @@ function App() {
           <textarea
             placeholder="Enter your simple sentence here"
             onChange={(e) => {
+              setComplexSentence("");
               setSimpleSentence(e.target.value);
             }}
           />
